@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Byte Belts Explorers</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="explorer">
+<header class="topbar">
+  <a class="icon-btn" href="index.html" aria-label="Home">
+    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" fill="currentColor"/></svg>
+  </a>
+  <div class="brand">Byte Belts <span>Explorers</span></div>
+  <div class="spacer"></div>
+  <div id="beltChip" class="belt-chip"></div>
+  <button id="labBtn" class="top-link">Creator Lab</button>
+  <button id="soundBtn" class="icon-btn" aria-label="Sound on or off"></button>
+</header>
+
+<main id="map" class="map"></main>
+
+<main id="play" hidden>
+  <div class="play-grid">
+    <section class="play-left">
+      <div class="play-head">
+        <button id="backBtn" class="btn btn-plain small">&#9664; Map</button>
+        <h2 id="levelTitle"></h2>
+      </div>
+      <div id="board" class="board-host"></div>
+      <div id="variantNote" class="variant-note" hidden></div>
+      <div class="runbar">
+        <button id="runBtn" class="btn btn-go">&#9654; Run</button>
+        <button id="resetBtn" class="btn btn-plain">Reset</button>
+        <label class="speed">Speed <input type="range" id="speed" min="1" max="3" step="1" value="1" aria-label="Speed"></label>
+      </div>
+      <div id="message" class="message" role="status" aria-live="polite" hidden></div>
+      <div class="mission card">
+        <h3>Mission</h3>
+        <p id="mission"></p>
+        <span id="rule" class="rule" hidden></span>
+        <div id="scroll" class="scroll code" hidden></div>
+        <div class="mission-foot">
+          <button id="hintBtn" class="btn btn-plain small">Need a hint?</button>
+          <button id="restartBtn" class="btn btn-plain small">Start over</button>
+          <span id="counter" class="counter"></span>
+        </div>
+        <p id="hint" class="hint" hidden></p>
+      </div>
+    </section>
+
+    <section class="play-right">
+      <div class="workbar">
+        <span id="modeTag" class="mode-tag">Blocks</span>
+        <button id="lensBtn" class="btn btn-plain small" hidden>Java Lens</button>
+      </div>
+      <div id="blockWork" class="work">
+        <div id="blockly"></div>
+        <aside id="javaPanel" class="java-panel" hidden>
+          <h3>Java Lens — your blocks as real Java</h3>
+          <div id="javaView" class="code"></div>
+        </aside>
+      </div>
+      <div id="javaWork" class="editor-wrap" hidden>
+        <div class="editor">
+          <pre id="editorView" class="code" aria-hidden="true"></pre>
+          <textarea id="editorText" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" aria-label="Java code editor"></textarea>
+        </div>
+        <aside class="cheat">
+          <h3>Java cheat sheet</h3>
+          <h4>Commands</h4>
+          <code>hero.moveForward();</code><code>hero.turnLeft();</code><code>hero.turnRight();</code><code>hero.paint("red");</code>
+          <h4>Questions (yes / no)</h4>
+          <code>hero.pathAhead()</code><code>hero.pathLeft()</code><code>hero.pathRight()</code><code>hero.atGoal()</code>
+          <h4>Repeat 4 times</h4>
+          <code>for (int i = 0; i &lt; 4; i++) {
+    ...
+}</code>
+          <h4>Repeat until at flag</h4>
+          <code>while (!hero.atGoal()) {
+    ...
+}</code>
+          <h4>Decide</h4>
+          <code>if (hero.pathAhead()) {
+    ...
+} else {
+    ...
+}</code>
+          <h4>Variable</h4>
+          <code>int count = 0;
+count = count + 1;</code>
+          <h4>Method (your own command)</h4>
+          <code>static void walk(int n) {
+    ...
+}
+walk(3);</code>
+        </aside>
+      </div>
+    </section>
+  </div>
+</main>
+
+<main id="lab" class="lab" hidden>
+  <div class="play-head">
+    <button id="labBack" class="btn btn-plain small">&#9664; Map</button>
+    <h2>Creator Lab — build your own level</h2>
+  </div>
+  <p>Pick a tool, then click squares on the board. Every level needs Bit, plus a flag, gems or paint spots. Then play it yourself or challenge your family!</p>
+  <div id="labTools" class="lab-tools"></div>
+  <div id="labBoard" class="board-host"></div>
+  <div class="lab-actions">
+    <button id="labTurn" class="btn btn-plain">Turn Bit &#8635;</button>
+    <button id="labClear" class="btn btn-plain">Clear</button>
+    <button id="labPlayBlocks" class="btn btn-go">&#9654; Play with blocks</button>
+    <button id="labPlayJava" class="btn btn-go" hidden>&#9654; Play with Java</button>
+  </div>
+  <div id="labMsg" class="message" hidden></div>
+</main>
+
+<script src="vendor/blockly/blockly_compressed.js"></script>
+<script src="vendor/blockly/blocks_compressed.js"></script>
+<script src="vendor/blockly/en.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/java.js"></script>
+<script src="js/levels-explorer.js"></script>
+<script src="js/store.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/blocks.js"></script>
+<script src="js/explorer.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Byte Belts Grown-ups Guide</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="icon-btn" href="index.html" aria-label="Home">
+    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" fill="currentColor"/></svg>
+  </a>
+  <div class="brand">Byte Belts <span>Grown-ups</span></div>
+  <div class="spacer"></div>
+  <button class="top-link" onclick="window.print()">Print</button>
+</header>
+
+<main class="guide">
+  <h1>Grown-ups guide</h1>
+  <p class="lede">Byte Belts is a free, belt-based coding course you run at home. Children earn belts by passing a Belt Test for each big idea, moving from tap-the-arrow puzzles, to Scratch-style blocks, to typing real Java.</p>
+  <nav class="guide-nav no-print">
+    <a href="#progress">Progress</a><a href="#how">How to run a session</a><a href="#belts">Belt scale</a>
+    <a href="#scale">Mastery scale</a><a href="#plans-cubs">Cubs lesson plans</a><a href="#plans-explorers">Explorers lesson plans</a><a href="#settings">Settings</a>
+  </nav>
+
+  <h2 id="progress">Progress</h2>
+  <div class="progress-grid" id="progressGrid"></div>
+
+  <h2 id="how">How to run a session</h2>
+  <ol>
+    <li><b>Warm up away from the screen (5 min).</b> Each lesson plan starts with an "unplugged" game that teaches the idea with bodies and paper.</li>
+    <li><b>Play 2–4 levels (10–20 min).</b> Sit beside your child. They hold the mouse or tablet; you ask questions.</li>
+    <li><b>Talk it over (2 min).</b> Ask one of the plan's questions: what did the program do, and why?</li>
+  </ol>
+  <p class="note">The golden rule: when something goes wrong, do not fix it for them. Ask "what did you expect to happen?" and "where did it go differently?" Finding the bug is the lesson.</p>
+  <h3>Stars and belts</h3>
+  <ul>
+    <li>Every solved level earns 1–3 stars. Three stars means the answer was as short as the model answer — it rewards using loops and functions.</li>
+    <li>The last level in each belt is the <b>Belt Test</b>. Passing it without help, and explaining the answer aloud, earns the belt.</li>
+    <li>Some levels have a <b>rule</b> (for example "use a loop"), and some change every time Run is pressed, so the code has to work in general.</li>
+  </ul>
+
+  <h2 id="belts">Belt scale</h2>
+  <h3>Explorers (ages 7–11)</h3>
+  <div class="table-wrap"><table id="beltTableExplorer"></table></div>
+  <h3>Cubs (ages 4–6)</h3>
+  <div class="table-wrap"><table id="beltTableJunior"></table></div>
+  <p class="note">A Cub who earns the Blue Belt is ready to start Explorers White Belt with a grown-up reading the missions aloud.</p>
+
+  <h2 id="scale">Mastery scale</h2>
+  <p>Use this 1–4 scale for each belt. Award the belt at <b>3</b>. Speed does not matter; understanding does.</p>
+  <div class="table-wrap"><table id="scaleTable"></table></div>
+  <h3>What to watch for</h3>
+  <div class="table-wrap"><table id="strandTable"></table></div>
+
+  <h2 id="plans-cubs">Cubs lesson plans</h2>
+  <div id="plansJunior"></div>
+
+  <h2 id="plans-explorers">Explorers lesson plans</h2>
+  <div id="plansExplorer"></div>
+
+  <h2 id="settings" class="no-print">Settings</h2>
+  <div class="settings no-print">
+    <label><input type="checkbox" id="setUnlock"> <span><b>Unlock every level.</b> Lets you jump anywhere. Leave off for children so levels open one at a time.</span></label>
+    <label><input type="checkbox" id="setLens"> <span><b>Show the Java Lens early.</b> Normally the Java panel appears after the Blue Belt. Turn on to show it beside the blocks from the start.</span></label>
+    <label><input type="checkbox" id="setSound"> <span><b>Sound effects and read-aloud voice.</b></span></label>
+    <div class="lab-actions">
+      <button class="btn btn-plain" id="resetJunior">Reset Cubs progress</button>
+      <button class="btn btn-plain" id="resetExplorer">Reset Explorers progress</button>
+    </div>
+    <p class="note">Progress is saved in this browser on this device only. Nothing is sent to the internet, and there are no accounts or adverts.</p>
+  </div>
+</main>
+
+<script src="js/engine.js"></script>
+<script src="js/java.js"></script>
+<script src="js/levels-explorer.js"></script>
+<script src="js/levels-junior.js"></script>
+<script src="js/curriculum.js"></script>
+<script src="js/store.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/parents.js"></script>
+</body>
+</html>

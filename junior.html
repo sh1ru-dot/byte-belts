@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Byte Belts Cubs</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="junior">
+<header class="topbar">
+  <a class="icon-btn" href="index.html" aria-label="Home">
+    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" fill="currentColor"/></svg>
+  </a>
+  <div class="brand">Byte Belts <span>Cubs</span></div>
+  <div class="spacer"></div>
+  <div id="beltChip" class="belt-chip"></div>
+  <button id="soundBtn" class="icon-btn" aria-label="Sound on or off"></button>
+</header>
+
+<main id="map" class="map"></main>
+
+<main id="play" class="jr-play" hidden>
+  <div class="jr-head">
+    <button id="backBtn" class="icon-btn big" aria-label="Back to the map">
+      <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <p id="say" class="say"></p>
+    <button id="speakBtn" class="icon-btn big speak" aria-label="Read it to me">
+      <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <div id="board" class="board-host"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <div class="strip-wrap">
+    <div id="strip" class="strip" aria-label="Your program"></div>
+    <button id="goBtn" class="go-btn" aria-label="Go">
+      <svg viewBox="0 0 24 24" width="44" height="44" aria-hidden="true"><path d="M7 4.5v15l13-7.5z" fill="currentColor"/></svg>
+      <span>Go</span>
+    </button>
+  </div>
+  <div class="palette">
+    <div id="arrows" class="palette-row"></div>
+    <div id="numbers" class="palette-row numbers"></div>
+    <button id="trashBtn" class="tile-btn trash" aria-label="Remove an arrow">
+      <svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><path d="M5 7h14M10 7V4h4v3M7 7l1 13h8l1-13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+</main>
+
+<script src="js/engine.js"></script>
+<script src="js/levels-junior.js"></script>
+<script src="js/store.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/junior.js"></script>
+</body>
+</html>
