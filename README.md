@@ -10,6 +10,8 @@ No accounts, no adverts, no fees, and it works without the internet.
 
 ## Start it
 
+**Online (any device):** https://sh1ru-dot.github.io/byte-belts/
+
 **On the Mac:** double-click `start.command`. A browser tab opens at `http://localhost:8642`.
 
 **On an iPad or another computer (same Wi-Fi):** start it on the Mac as above, then on the
